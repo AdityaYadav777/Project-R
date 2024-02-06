@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".fragments.homeFrag">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bannerRec"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/shape5"
+        android:layout_margin="10dp"
+        tools:listitem="@layout/item_banner"
+        />
+/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For MCA"
+        android:textColor="#B50F0F"
+        android:fontFamily="sans-serif-black"
+       android:layout_below="@+id/bannerRec"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All>>"
+        android:textColor="#B50F0F"
+        android:fontFamily="sans-serif-black"
+        android:layout_below="@+id/bannerRec"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/viewAllList"
+        android:layout_marginEnd="5dp"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/viewAllList">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myRec"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_margin="7dp"
+            tools:listitem="@layout/item_view"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.4dp"
+            android:layout_below="@id/myRec"
+            android:background="@drawable/shape3"
+            android:id="@+id/myView"
+            android:layout_margin="10dp"/>
+
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="For MBA"
+          android:layout_below="@+id/myView"
+          android:layout_marginStart="20dp"
+          android:textStyle="bold"
+          android:textColor="#ED4504"
+          android:textSize="16sp"
+          android:fontFamily="sans-serif-black"
+          />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All>>"
+            android:layout_below="@+id/myView"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"
+            android:textColor="#ED4504"
+            android:fontFamily="sans-serif-black"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:textSize="16sp"
+            android:id="@+id/viewAllMbaList"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@+id/viewAllMbaList"
+            android:id="@+id/myRecMba"
+            tools:listitem="@layout/item_view"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
+
+
+
+
+</RelativeLayout>

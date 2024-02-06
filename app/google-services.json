@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "400849398491",
+    "project_id": "project-r-d7497",
+    "storage_bucket": "project-r-d7497.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400849398491:android:624bcb6e508d17a12b7afe",
+        "android_client_info": {
+          "package_name": "com.aditya.projectr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKAoOBycFhyqVYewRkCdI7gLiccnOSA3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

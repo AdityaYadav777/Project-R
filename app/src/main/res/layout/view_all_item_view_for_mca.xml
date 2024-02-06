@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="185dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/pdf"
+        android:background="@drawable/shape5"
+        android:layout_centerVertical="true"
+        android:id="@+id/pdf"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/bookmark"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        app:tint="#FF7316" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ram RamRaRamRAm"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/myTitle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hsdbhfvbhsvdhfvhsfbdhs"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="65dp"
+        android:id="@+id/myDesc"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/baseline_star_24"
+        app:tint="#FF7316"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="130dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.2"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="133dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@drawable/shape5"
+            android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
