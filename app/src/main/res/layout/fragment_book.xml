@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EFE9E9"
     tools:context=".fragments.bookFrag">
 
     <EditText
@@ -15,11 +16,19 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/shape3"
         android:drawablePadding="10dp"
-        android:hint="Search book"
+        android:hint="Search Course"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:inputType="text"
         android:paddingStart="10dp"
         android:id="@+id/mysearch"
         android:paddingEnd="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showError"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mysearch"/>
 <ImageView
     android:layout_width="50dp"
     android:layout_height="50dp"

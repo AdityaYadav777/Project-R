@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#EFE9E9"
     tools:context=".fragments.homeFrag">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -71,8 +71,7 @@
           android:layout_below="@+id/myView"
           android:layout_marginStart="20dp"
           android:textStyle="bold"
-          android:textColor="#ED4504"
-          android:textSize="16sp"
+          android:textColor="#B50F0F"
           android:fontFamily="sans-serif-black"
           />
         <TextView
@@ -82,11 +81,10 @@
             android:layout_below="@+id/myView"
             android:layout_marginStart="20dp"
             android:textStyle="bold"
-            android:textColor="#ED4504"
+            android:textColor="#B50F0F"
             android:fontFamily="sans-serif-black"
             android:layout_alignParentRight="true"
             android:layout_marginEnd="5dp"
-            android:textSize="16sp"
             android:id="@+id/viewAllMbaList"
             />
 

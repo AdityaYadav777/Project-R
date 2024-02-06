@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 if(link!!.isEmpty()){
     Toast.makeText(this,"Link is not Complete",Toast.LENGTH_SHORT).show()
     startActivity(Intent(this,dashboardAct::class.java))
+    finish()
 }else {
 
 

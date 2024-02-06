@@ -7,13 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.aditya.projectr.MBA.myMbaAdapter
 import com.aditya.projectr.adapter.myAdapter
 import com.aditya.projectr.bannerAdapter.myBannerAdapter
 import com.aditya.projectr.bannerAdapter.myBannerData
 import com.aditya.projectr.databinding.FragmentHomeBinding
 import com.aditya.projectr.models.myData
-import com.aditya.projectr.search.DataSearch
-import com.aditya.projectr.search.mySearchAdapter
 import com.aditya.projectr.viewAllMcaAct
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.firestore
@@ -59,8 +58,30 @@ if (isAdded){
 
 binding.viewAllList.setOnClickListener {
 
-    startActivity(Intent(requireContext(),viewAllMcaAct::class.java))
+   val i=Intent(context,viewAllMcaAct::class.java)
+    i.putExtra("key","1")
+    i.putExtra("title","MCA")
+    startActivity(i)
 }
+
+        binding.viewAllMbaList.setOnClickListener {
+            val i=Intent(requireContext(),viewAllMcaAct::class.java)
+            i.putExtra("key","2")
+            i.putExtra("title","MBA")
+            startActivity(i)
+        }
+
+
+
+        db.collection("MBA").addSnapshotListener { value, error ->
+            val listOfMba = arrayListOf<myData>()
+            val dataMba = value?.toObjects(myData::class.java)
+            listOfMba.addAll(dataMba!!)
+            if (isAdded){
+                binding.myRecMba.layoutManager=LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+                binding.myRecMba.adapter= myMbaAdapter(requireContext(),listOfMba)
+            }
+        }
 
 
 

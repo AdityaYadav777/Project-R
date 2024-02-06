@@ -38,9 +38,30 @@ class bookFrag : Fragment() {
                     binding.recSearch.layoutManager= LinearLayoutManager(requireContext())
                     binding.recSearch.adapter= mySearchAdapter(requireContext(),listOfSearch)
                     binding.progressBar2.visibility = View.GONE
+                    binding.showError.text=""
                  if (value.isEmpty){
+                     binding.showError.text="Not Found"
                      Toast.makeText(requireContext(),"Not Found",Toast.LENGTH_SHORT).show()
                  }
+if(value.isEmpty){
+                    db.collection("MBA")
+                        .whereEqualTo("desc", searchData).addSnapshotListener { value, error ->
+                            val listOfSearch = arrayListOf<DataSearch>()
+                            val dataL = value?.toObjects(DataSearch::class.java)
+                            listOfSearch.addAll(dataL!!)
+                            binding.recSearch.layoutManager = LinearLayoutManager(requireContext())
+                            binding.recSearch.adapter =
+                                mySearchAdapter(requireContext(), listOfSearch)
+                            binding.progressBar2.visibility = View.GONE
+                            binding.showError.text=""
+                            if (value.isEmpty) {
+                                binding.showError.text="Not Found"
+                                Toast.makeText(requireContext(), "Not Found", Toast.LENGTH_SHORT)
+                                    .show()
+                            }
+                        }
+
+                        }
                 }
         }
 
